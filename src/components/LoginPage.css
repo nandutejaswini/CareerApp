@@ -1,0 +1,73 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .role-selection {
+    margin: 20px 0;
+  }
+  
+  .role-selection div {
+    margin: 10px 0;
+  }
+  /* CandidateSelection.css */
+/* Assuming continued use of LoginPage.css or a new dedicated CSS file */
+.candidate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.candidate-container h2 {
+  max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+ .candidate-container input, .candidate-container ul {
+  width: 80%; /* Adjust based on preference */
+  max-width: 600px; /* Ensures content doesn't stretch too much on larger screens */
+}
+
+.candidate-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.candidate-container li {
+  margin: 10px 0;
+  text-align: center; /* Center align the text within each list item */
+}
+

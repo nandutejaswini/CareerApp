@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/NavBar.js';
+import Home from './components/Home.js';
+import JobSearch from './components/JobSearch.js';
+import UploadResume from './components/UploadResume.js';
+import LoginPage from './components/LoginPage.js'; // Make sure to import LoginPage
+import SignUp from './components/SignUp.js';
+import Profile from './components/Profile.js';
+import CandidateSelection from './components/CandidateSelection';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/job-search" element={<JobSearch />} />
+        <Route path="/upload-resume" element={<UploadResume />} />
+        <Route path="/login" element={<LoginPage />} /> {/* Add this line */}
+        <Route path="/SignUp" element={<SignUp />} /> {/* Add this line */}
+        <Route path="/Profile" element={<Profile />} /> {/* Add this line */}
+        <Route path="/CandidateSelection" element={<CandidateSelection />} /> {/* Add this line */}
+
+        
+
+
+      </Routes>
+    </Router>
   );
 }
 
