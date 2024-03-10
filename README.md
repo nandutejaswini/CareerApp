@@ -1,3 +1,7 @@
+## This web application serves as a dynamic job recruitment platform, enabling students and recruiters to seamlessly connect. Students can search for job opportunities, upload their resumes, and customize their profiles, while recruiters can post job vacancies, browse through candidates, and directly access resumes. The platform fosters efficient interaction between job seekers and providers, streamlining the recruitment process with user-specific functionalities and a straightforward, intuitive interface.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
