@@ -6,6 +6,8 @@ import './LoginPage.css';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('student'); // Default role
+
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = async (event) => {
@@ -70,6 +72,30 @@ const LoginPage = () => {
           />
           </label>
         </div>
+        <div className="role-selection">
+          <div>
+            <input
+              type="radio"
+              id="student"
+              name="role"
+              value="student"
+              checked={role === 'student'}
+              onChange={(e) => setRole(e.target.value)}
+            />
+            <label htmlFor="student">Student</label>
+          
+          
+            <input
+              type="radio"
+              id="recruiter"
+              name="role"
+              value="recruiter"
+              checked={role === 'recruiter'}
+              onChange={(e) => setRole(e.target.value)}
+            />
+            <label htmlFor="recruiter">Recruiter</label>
+          </div>
+        </div>
         <button type="submit" className="btn btn-primary">Login</button>
       </form>
       
@@ -81,3 +107,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
