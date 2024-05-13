@@ -20,19 +20,37 @@ const Profile = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(profileData);
-    // Here you would send the profileData to the server to update the user's profile
-    // This could be a PATCH or PUT request to a '/api/profile' endpoint
+    try {
+      const response = await fetch('/api/profile', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          // Include authorization token if needed
+        },
+        body: JSON.stringify(profileData),
+      });
+      if (response.ok) {
+        const updatedProfile = await response.json();
+        console.log('Profile updated:', updatedProfile);
+        // Handle successful profile update here (e.g., show a success message or navigate away)
+      } else {
+        // Handle errors (e.g., show error message)
+        console.error('Failed to update profile');
+      }
+    } catch (error) {
+      console.error('Error updating profile:', error);
+    }
   };
+  
 
   return (
     <div className="profile-edit-container">
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" name="name" value={profileData.name} onChange={handleChange} />
+          <input type="text" name="name" value={profileData.name} onChange={handleChange} placeholder="Your full name" />
         </label>
         <label>
           Title:

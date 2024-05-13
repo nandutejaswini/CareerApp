@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './LoginPage.css';
 
 const CandidateSelection = () => {
   // Initial mock data for candidates
-  const [candidates, setCandidates] = useState([
+  const [candidates] = useState([
     { id: 1, name: 'Alice Johnson', role: 'Software Developer', skills: 'JavaScript, React', resumeLink: '/resumes/alice-johnson.pdf' },
     { id: 2, name: 'Bob Smith', role: 'Data Scientist', skills: 'Python, Machine Learning', resumeLink: '/resumes/bob-smith.pdf' },
     // Add more candidates as needed

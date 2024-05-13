@@ -3,19 +3,18 @@
     margin: auto;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(226, 70, 70, 0.1);
+    background-color: #f4f4f4;
+
   }
   
-  .form-group {
-    margin-bottom: 15px;
-  }
+  
   
   .form-control {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
     border-radius: 4px;
   }
   
@@ -69,5 +68,14 @@
 .candidate-container li {
   margin: 10px 0;
   text-align: center; /* Center align the text within each list item */
+}
+/* SignUp.css */
+.form-group label {
+  display: flex;
+  align-items: center;
+}
+
+.form-group label svg {
+  margin-right: 8px;
 }
 

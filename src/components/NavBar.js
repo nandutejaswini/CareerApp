@@ -8,9 +8,12 @@ const Navbar = () => {
         <Link to="/" style={styles.link}>Home</Link>
       </div>
       <div style={styles.rightNav}>
-        <Link to="/job-search" style={styles.link}>Job Search</Link>
+        <Link to="/candidate-selection" style={styles.link}>CandidateSelection</Link>
+        <Link to="/job-search" style={styles.link}>JobSearch</Link>
         <Link to="/login" style={styles.link}>Login</Link>
         <Link to="/profile" style={styles.link}>Profile</Link>
+        
+       
       </div>
     </nav>
   );
@@ -25,6 +28,7 @@ const styles = {
     backgroundColor: '#007bff',
     color: '#ffffff',
     padding: '10px 0'
+
   },
   leftNav: {
     // No specific styles needed here unless you want to further style the Home link container
@@ -43,4 +47,5 @@ const styles = {
   }
 };
 
+  
 export default Navbar;
